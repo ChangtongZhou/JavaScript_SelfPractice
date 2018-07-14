@@ -15,6 +15,9 @@ console.log((0.1 + 0.2 == 0.3));
 // false
 // JS uses 64-bit floating point representation, which is the same as Java's double.
 // 0.1 + 0.2 is bigger than the rational number 0.3
+// How to fix it?
+console.log(0.3 - (0.1 + 0.2) < Number.EPSILON);
+// The Number.EPSILON property represents the difference between 1 and the smallest floating point number greater than 1.
 
 console.log(1 +  "2" + "2");
 // 122
@@ -45,6 +48,7 @@ console.log("0 || 1 = "+(0 || 1));
 // 0 || 1 = 1
 // || returns true if either operand is true, if both false, returns false
 // Here 0 is falsy, 1 is truthy, so return 1
+// Note: Falsy values: 0, false, "", null, undefined, NaN, "0", []
 
 console.log("1 || 2 = "+(1 || 2));
 // 1 || 2 = 1

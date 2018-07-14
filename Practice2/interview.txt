@@ -1,0 +1,17 @@
+array:
+- map: implement map
+- filter: implement filter
+- forEach
+- includes
+- join
+- reduce
+- sort
+- splice
+- slice
+
+String:
+- split
+- indexOf
+
+Set:
+- 
