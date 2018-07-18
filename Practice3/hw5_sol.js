@@ -1,4 +1,3 @@
-
 class Card {
   constructor(rank, suit, color) {
     this.rank = rank;

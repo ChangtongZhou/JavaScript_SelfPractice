@@ -9,20 +9,22 @@ function mapSum(str) {
     num++;
   }
 
-  let arr = str.split(" ");
-  let sarr = arr.map(s => s.split(""));
+  // let arr = str.split(" ");
+  // let sarr = arr.map(s => s.split(""));
+
+  let sarr = str.split(" ").map(s => s.split(""));
 
   sarr.forEach(function(s){
     let sum = 0;
-    console.log(`s: ${s}`);
+    // console.log(`s: ${s}`);
     s.forEach(function(letter) {
       // console.log(`letter: ${letter}`);
       if (letter in dict) {
         sum += dict[letter];
       }
     });
-    // console.log(`sum: ${sum}`);
-    if (!(res.hasOwnProperty(sum))) {
+
+    if (!(res.hasOwnProperty(sum))) { // check if sum exists in res object
       res[sum] = [];
     }
     res[sum].push(s.join(""));

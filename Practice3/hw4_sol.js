@@ -7,6 +7,11 @@ function isInteger(x) {
   }
 }
 
+// Method 2:
+function isInteger2(x) {
+  return typeof x === 'number' && (x % 1 === 0);
+}
+
 // console.log(isInteger(1); // true
 // console.log(isInteger("sure")); // false
 // console.log(isInteger(1.1)); // false

@@ -23,6 +23,7 @@ console.log(foo); // undefined
 var key = 'such_dynamic'
 var {[key]: foo} = {such_dynamic: 'bar'}; // {such_dynamic: foo} = {such_dynamic: 'bar'}
 console.log(foo); // bar
+// b/c [key] is treated as a variable
 
 // --------------------------------------------------------------------------------
 var [a] = [];
