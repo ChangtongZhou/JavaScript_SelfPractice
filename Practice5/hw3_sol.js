@@ -17,6 +17,7 @@ const myString = "99 bottles of beer on the wall " +
 // [ ' ',
 //   index: 2,
 //   input: '99 bottles of beer on the wall take 1 down and pass it around -- 98 bottles of beer on the wall.' ]
+// explaination: means not any of the letters in -0-9a-z.
 // =============================================================================================================
 
 // const match = myString.match(/[0-9][0-9][0-9]|[0-9][0-9]|[0-9]/);
@@ -84,7 +85,7 @@ const myString = "99 bottles of beer on the wall " +
 
 // =============================================================================================================
 // const promo = "Opening for XAAX is the dynamic GOOG! At the box office now!";
-// const bands = promo.match(/(?:[A-Z])(?:[A-Z])\2\1/g);
+// const bands = promo.match(/(?:[A-Z])(?:[A-Z])\2\1/g);  // trying to find a pattern like 'aabb'
 // console.log(bands);
 // Output: null
 

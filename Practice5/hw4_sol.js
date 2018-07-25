@@ -19,7 +19,7 @@ var tests = [
 ];
 
 for(var test in tests) {
-  if(tests[test].match(/^(?=.+[a-z])(?=.+[A-Z])(?=.+\d)\w{6,10}$/)) {
+  if(tests[test].match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)\w{6,10}$/)) {
     console.log(tests[test] + " true");
   } else {
     console.log(tests[test] + " false");

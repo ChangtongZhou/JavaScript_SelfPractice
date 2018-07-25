@@ -6,7 +6,7 @@ var myObject = {
         console.log("outer func:  this.foo = " + this.foo); // bar
         console.log("outer func:  self.foo = " + self.foo); // bar
         (function() {
-            console.log("inner func:  this.foo = " + this.foo); // undefined, b/c 'this' here is pointing to the global object
+            console.log("inner func:  this.foo = " + this.foo); // undefined, b/c 'this' here is pointing to the inner function
             console.log("inner func:  self.foo = " + self.foo); // bar
         }());
     }
@@ -43,16 +43,23 @@ var hero = {
     return this._name;
   }
 }
+
+// Way 1:
 var stoleSecretIdentity = hero.getSecretIdentity.bind(hero);
 
 console.log(stoleSecretIdentity());
 console.log(hero.getSecretIdentity());
 
+// Way 2:
+var stoleSecretIdentity = hero.getSecretIdentity;
+console.log(stoleSecretIdentity.call(hero));
+console.log(hero.getSecretIdentity());
+
 // -----------------------------------------------------------------------------------
 // Assuming d is an “empty” object in scope, say:
-//
-// var d = {};
-//
+
+var d = {};
+
 // …what is accomplished using the following code?
 
 [ 'zebra', 'horse' ].forEach(function(k) {
@@ -69,7 +76,10 @@ var a={},
     b={key:'b'},
     c={key:'c'};
 
-a[b]=123;
+a[b]=123; // Object.prototype.toString.call(b); => [object object]
+// a["object object"] = 123
 a[c]=456;
+// a["object object"] = 456
 
-console.log(a[b]); // 456, b/c the object keys after getting stringified overwrite each other.
+console.log(a[b]); // 456, b/c the object keys after getting stringified overwrite each other
+// so the key is always treated as a string.
