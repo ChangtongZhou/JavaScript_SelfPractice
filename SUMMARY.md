@@ -5,4 +5,5 @@
 * [7-18 Lec](7-18-lec.md)
 * [7-20 Lec](7-20-lec.md)
 * [7-23 Lec](untitled.md)
+* [7-25 Lec](7-25-lec.md)
 
