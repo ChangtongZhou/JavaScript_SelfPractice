@@ -145,5 +145,5 @@ see code example
 
 ### Namespace: 
 
-Used to differentiate same name variables among different js files
+Used to differentiate same name variables among different js files.
 
