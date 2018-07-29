@@ -87,19 +87,52 @@ function parseURL (url) {
 
 // 5. Write a JavaScript function to retrieve all the names of any given object's own and inherited properties.
 
-function Person() {
+// ES5
+function Person(name) {
   this.name = "Nicole";
-  this.job = "student"
 }
 
-var person1 = new Person();
-Person.prototype.age = 10;
-Person.prototype.school = "SJSU";
+function Student(studentId) {
+  // Call constructor of superclass to initialize superclass-derived members.
+  // Person.call(this, name);
 
-function getAllPros(obj) {
-  for (let key in obj) {
-    console.log(key);
+  // Initialize subclass's own members.
+  this.studentId = studentId;
+}
+
+Student.prototype = Object.create(Person.prototype);
+Student.prototype.constructor = Student;
+
+
+let st = new Student(123);
+// console.log(Object.getOwnPropertyNames(st));
+
+// ES6
+class Animal {
+  constructor() {
+    this.name = "animal";
   }
 }
 
-getAllPros(person1);
+class Cat extends Animal{
+  constructor(color) {
+    super();
+    this.color = color;
+  }
+
+}
+
+let theCat = new Cat("white");
+console.log(Object.getOwnPropertyNames(theCat));
+// var person1 = new Person();
+// var person1 = Object.create(Person);
+// Person.prototype.age = 10;
+// Person.prototype.school = "SJSU";
+
+// function getAllPros(obj) {
+//   for (let key in obj) {
+//     console.log(key);
+//   }
+// }
+
+// getAllPros(person1);

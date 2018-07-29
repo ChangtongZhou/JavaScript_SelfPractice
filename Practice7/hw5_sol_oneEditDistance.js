@@ -2,7 +2,6 @@
   Given two strings S and T, determine if they are both one edit distance apart.
 */
 
-// check two strings differ 1 char
 // Thought:
 /**
   Method 1:

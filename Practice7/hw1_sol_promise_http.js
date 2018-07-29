@@ -6,3 +6,11 @@ axios.get('https://www.w3schools.com/angular/customers.php')
     console.log(res.data);
   })
   .catch((err) => console.log(err));
+
+
+// const promise = new Promise((resolve, reject) => {
+//   resolve();
+//   reject();
+// })
+//
+// promise.then(res=>console.log(res)).catch(err=>console.log(err));
