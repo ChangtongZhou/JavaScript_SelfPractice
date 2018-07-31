@@ -7,4 +7,5 @@
 * [7-23 Lec](7-23-lec.md)
 * [7-25 Lec](7-25-lec.md)
 * [7-27 Lec](7-27-lec.md)
+* [7-28 Lec](7-28-lec.md)
 
