@@ -8,4 +8,6 @@
 * [7-25 Lec](7-25-lec.md)
 * [7-27 Lec](7-27-lec.md)
 * [7-28 Lec](7-28-lec.md)
+* [React 8-1 Lec](react-8-1-lec.md)
+* [React 8-3 Lec](react-8-3-lec.md)
 
