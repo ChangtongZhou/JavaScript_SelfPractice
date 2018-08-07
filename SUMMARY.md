@@ -11,4 +11,6 @@
 * [React 8-1 Lec](react-8-1-lec.md)
 * [React 8-3 Lec](react-8-3-lec.md)
 * [React hw-review1](react-hw-review1.md)
+* [React 8-6 Lec](react-8-6-lec.md)
+* [React Q&A](react-q-and-a.md)
 
