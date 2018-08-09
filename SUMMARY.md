@@ -14,4 +14,5 @@
 * [React 8-6 Lec](react-8-6-lec.md)
 * [React Q&A](react-q-and-a.md)
 * [React Router 8-6 Lec](react-router-8-6-lec.md)
+* [React Router 8-8 Lec](react-router-8-8-lec.md)
 

@@ -374,3 +374,126 @@ class App extends Component {
 }
 ```
 
+## How to get history
+
+Every component which is in Routes component props has three more props by default: match , location, history.
+
+```text
+<Route path="/" component={Home} />
+```
+
+If we using the render syntax, the component won't have those three props, you have to use withRouter to get that.
+
+```text
+<Route path="/" render={() => <Home />} />
+```
+
+Use withRouter will give component history and the closest match and location;
+
+```text
+import React, {Component} from 'react';
+import {BrowserRouter, Route, withRouter} from 'react-router-dom';
+
+/* Home component */
+const Home = props => {
+  console.log('props in Home:');
+  console.log(props);
+  return (
+    <div>
+      <h2>Home</h2>
+    </div>
+  );
+};
+
+/* About component */
+const About = props => {
+  console.log('props in About:');
+  console.log(props);
+  return (
+    <div>
+      <h2>About</h2>
+      <Button />
+    </div>
+  );
+};
+
+/* Users component */
+const Users = props => {
+  console.log('props in User:');
+  console.log(props);
+  return (
+    <div>
+      <h2>User</h2>
+      <WithRouterButton />
+    </div>
+  );
+};
+
+const Button = props => {
+  console.log('props in Button:');
+  console.log(props);
+  return <button>Button</button>;
+};
+
+const WithRouterButton = withRouter(Button);
+
+class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div>
+          <Route exact={true} path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/users" component={Users} />
+        </div>
+      </BrowserRouter>
+    );
+  }
+}
+```
+
+#### Exmaple 1 - Component in `<Route>` {#exmaple-1---component-in-route}
+
+```text
+import React, {Component} from 'react';
+import {BrowserRouter, Route, withRouter} from 'react-router-dom';
+
+/* Home component */
+const Home = () => (
+  <div>
+    <h2>Home</h2>
+  </div>
+);
+
+/* Login component */
+const Login = props => {
+  console.log(props);
+  return (
+    <div>
+      <h2>Login</h2>
+      <button
+        onClick={() => {
+          props.history.push('/');
+        }}>
+        Login
+      </button>
+    </div>
+  );
+};
+
+const WithRouterLogin = withRouter(Login);
+
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div>
+          <Route exact={true} path="/" component={Home} />
+          <Route path="/login" component={WithRouterLogin} />
+        </div>
+      </BrowserRouter>
+    );
+  }
+}
+```
+
