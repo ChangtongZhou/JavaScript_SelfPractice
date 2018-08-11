@@ -40,7 +40,7 @@ This is all about First User Interaction Time, or Initial Page Loading Time. Thi
 * Extract only the interaction part from React component, and add those code along with your HTML via `ReactDOM.hydrate()`.
 * After the HTML and the client side Javascript loaded in your browser, the client side Javascript will find the right component for all the interaction parts.
 * For real world problem, it will never be that easy especially when you try to add React Router and Redux in the SSR.
-* There are a number of wonderful frameworks help you do SSR. [Next.js](https://nextjs.org/) is the best and the most popular one.
+* **There are a number of wonderful frameworks help you do SSR.** [**Next.js**](https://nextjs.org/) **is the best and the most popular one.**
 
 ```jsx
 // server
