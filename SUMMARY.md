@@ -18,4 +18,5 @@
 * [Webpack 8-10 Lec](webpack-8-10-lec.md)
 * [Server Side Rendering](server-side-rendering.md)
 * [Redux 8-10 Lec](redux-8-10-lec.md)
+* [CSS Sepcifity \(Priority\)](css-sepcifity-priority.md)
 
