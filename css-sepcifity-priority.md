@@ -11,3 +11,5 @@
 
 > Note: Mostly we use class more often instead of id, because id has a really high priority, it is hard to override and debug, but class has lower priority, which makes things easier.
 
+Inline style in JSX: `style={{color: "red"}}`
+
