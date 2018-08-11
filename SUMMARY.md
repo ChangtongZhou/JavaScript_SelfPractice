@@ -17,4 +17,5 @@
 * [React Router 8-8 Lec](react-router-8-8-lec.md)
 * [Webpack 8-10 Lec](webpack-8-10-lec.md)
 * [Server Side Rendering](server-side-rendering.md)
+* [Redux 8-10 Lec](redux-8-10-lec.md)
 
