@@ -22,4 +22,6 @@
 * [React hw-review2](react-hw-review2.md)
 * [Redux 8-13 Lec](redux-8-13-lec.md)
 * [Redux 8-15 Lec](redux-8-15-lec.md)
+* [Redux 8-17 Lec](redux-8-17-lec.md)
+* [Useful resources](useful-resources.md)
 
